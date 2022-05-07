@@ -1,6 +1,6 @@
-# bookspace
+# Bookspace
 
-A new Flutter project.
+Hi! I am Akshat Raj Vansh. BookSpace is a platform where artists can freely publish their creations and enjoy the transactions without any middleman.
 
 ## Getting Started
 
