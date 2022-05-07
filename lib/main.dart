@@ -10,6 +10,7 @@ void main() {
       title: "BookSpace",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
+      debugShowCheckedModeBanner: false,
     ),
   );
 }
