@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../../utils/gradients.dart';
+import '../../../../utils/widgets/gradient_text.dart';
 import '../controllers/splash_controller.dart';
 
 class SplashView extends GetView<SplashController> {
@@ -45,11 +47,11 @@ class SplashView extends GetView<SplashController> {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  Text(
+                  GradientText(
                     'MarketPlace',
+                    gradient: primaryGradient,
                     style: GoogleFonts.poppins(
                       fontSize: 124,
-                      color: Colors.amber,
                       fontWeight: FontWeight.w900,
                     ),
                   ),
