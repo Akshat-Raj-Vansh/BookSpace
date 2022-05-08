@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../utils/gradients.dart';
+import '../../../../utils/widgets/gradient_btn.dart';
 import '../../../../utils/widgets/gradient_text.dart';
 import '../controllers/auth_controller.dart';
 
@@ -88,28 +89,33 @@ class AuthView extends GetView<AuthController> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      GestureDetector(
+                      GradientButton(
                         onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Button Pressed'),
-                            ),
+                          Get.toNamed('/auth');
+                          Get.snackbar(
+                            'Button Pressed',
+                            'MetaMask login should be initiated on the button click!',
+                            snackPosition: SnackPosition.BOTTOM,
+                            colorText: Colors.white,
                           );
                         },
                         child: Container(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 10),
+                              horizontal: 50, vertical: 10),
                           child: Text(
-                            'Let\'s get started!',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            'Register',
+                            style: GoogleFonts.poppins(
+                              fontSize: 18,
+                              color: Colors.white,
+                            ),
                           ),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            border: Border.all(color: Colors.amber, width: 2),
                             color: Colors.black,
+                            border: Border.all(color: Colors.black),
+                            borderRadius: BorderRadius.circular(24),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ],

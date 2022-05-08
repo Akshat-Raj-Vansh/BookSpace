@@ -20,17 +20,18 @@ class SplashView extends GetView<SplashController> {
             Align(
               alignment: Alignment.topCenter,
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
                     'The Book Space',
-                    style:
-                        GoogleFonts.poppins(fontSize: 20, color: Colors.white),
+                    style: GoogleFonts.poppins(
+                        fontSize: 20, color: Colors.white38),
                   ),
                   Expanded(child: SizedBox(width: 10)),
                   Text(
                     'Github',
-                    style:
-                        GoogleFonts.poppins(fontSize: 20, color: Colors.white),
+                    style: GoogleFonts.poppins(
+                        fontSize: 20, color: Colors.white38),
                   ),
                 ],
               ),
@@ -91,7 +92,10 @@ class SplashView extends GetView<SplashController> {
                           horizontal: 50, vertical: 10),
                       child: Text(
                         'Let\'s get started!',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        style: GoogleFonts.poppins(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
                       ),
                       decoration: BoxDecoration(
                         color: Colors.black,
@@ -100,30 +104,6 @@ class SplashView extends GetView<SplashController> {
                       ),
                     ),
                   ),
-                  // GestureDetector(
-                  //   onTap: () {
-                  //     Get.toNamed('/auth');
-                  //     Get.snackbar(
-                  //       'Button Pressed',
-                  //       'MetaMask login should be initiated on the button click!',
-                  //       snackPosition: SnackPosition.BOTTOM,
-                  //       colorText: Colors.white,
-                  //     );
-                  //   },
-                  //   child: Container(
-                  //     padding: const EdgeInsets.symmetric(
-                  //         horizontal: 20, vertical: 10),
-                  //     child: Text(
-                  //       'Let\'s get started!',
-                  //       style: TextStyle(fontSize: 20, color: Colors.white),
-                  //     ),
-                  //     decoration: BoxDecoration(
-                  //       borderRadius: BorderRadius.circular(20),
-                  //       border: Border.all(color: Colors.amber, width: 2),
-                  //       color: Colors.black,
-                  //     ),
-                  //   ),
-                  // )
                 ],
               ),
             ),
