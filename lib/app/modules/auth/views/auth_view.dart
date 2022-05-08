@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -9,6 +11,7 @@ import '../../../../utils/widgets/gradient_text.dart';
 import '../controllers/auth_controller.dart';
 
 class AuthView extends GetView<AuthController> {
+// final authController = Get.put(AuthController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -113,15 +116,22 @@ class AuthView extends GetView<AuthController> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 20, vertical: 5),
                             child: TextFormField(
+                              onTap: () {
+                                controller.userNameSelected();
+                              },
                               decoration: InputDecoration(
                                 hintText: 'Enter your USERNAME here',
                                 errorStyle: Theme.of(context)
                                     .textTheme
                                     .overline
                                     ?.copyWith(color: Colors.red, fontSize: 24),
-                                icon: Icon(
-                                  Icons.person_outlined,
-                                  color: Colors.white38,
+                                icon: Obx(
+                                  () => Icon(
+                                    Icons.person_outline,
+                                    color: controller.isUserNameSelected.value
+                                        ? Colors.cyan
+                                        : Colors.white38,
+                                  ),
                                 ),
                                 labelStyle: Theme.of(context)
                                     .textTheme
@@ -151,15 +161,22 @@ class AuthView extends GetView<AuthController> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 20, vertical: 5),
                             child: TextFormField(
+                              onTap: () {
+                                controller.emailSelected();
+                              },
                               decoration: InputDecoration(
                                 hintText: 'Enter your EMAIL here',
                                 errorStyle: Theme.of(context)
                                     .textTheme
                                     .overline
                                     ?.copyWith(color: Colors.red, fontSize: 24),
-                                icon: Icon(
-                                  Icons.email_outlined,
-                                  color: Colors.white38,
+                                icon: Obx(
+                                  () => Icon(
+                                    Icons.email_outlined,
+                                    color: controller.isEmailSelected.value
+                                        ? Colors.cyan
+                                        : Colors.white38,
+                                  ),
                                 ),
                                 labelStyle: Theme.of(context)
                                     .textTheme

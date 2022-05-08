@@ -1,3 +1,4 @@
+import 'package:flutter/animation.dart';
 import 'package:get/get.dart';
 
 import 'package:bookspace/app/modules/auth/bindings/auth_binding.dart';
@@ -19,16 +20,19 @@ class AppPages {
       name: _Paths.HOME,
       page: () => HomeView(),
       binding: HomeBinding(),
+      //curve: Curves.easeIn,
     ),
     GetPage(
       name: _Paths.AUTH,
       page: () => AuthView(),
       binding: AuthBinding(),
+      // curve: Curves.easeIn,
     ),
     GetPage(
       name: _Paths.SPLASH,
       page: () => SplashView(),
       binding: SplashBinding(),
+      // curve: Curves.easeIn,
     ),
   ];
 }

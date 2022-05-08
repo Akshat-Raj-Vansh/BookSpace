@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
 
 class AuthController extends GetxController {
-  //TODO: Implement AuthController
+  final isUserNameSelected = false.obs;
+  final isEmailSelected = false.obs;
 
-  final count = 0.obs;
+  static AuthController get authController => Get.find<AuthController>();
   @override
   void onInit() {
     super.onInit();
@@ -16,5 +17,14 @@ class AuthController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
+
+  userNameSelected() {
+    isUserNameSelected(true);
+    isEmailSelected(false);
+  }
+
+  emailSelected() {
+    isUserNameSelected(false);
+    isEmailSelected(true);
+  }
 }
