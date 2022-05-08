@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/splash_controller.dart';
 
@@ -19,12 +20,14 @@ class SplashView extends GetView<SplashController> {
                 children: [
                   Text(
                     'The Book Space',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    style:
+                        GoogleFonts.poppins(fontSize: 20, color: Colors.white),
                   ),
                   Expanded(child: SizedBox(width: 10)),
                   Text(
                     'Github',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    style:
+                        GoogleFonts.poppins(fontSize: 20, color: Colors.white),
                   ),
                 ],
               ),
@@ -36,24 +39,38 @@ class SplashView extends GetView<SplashController> {
                 children: [
                   Text(
                     'The Decentralized',
-                    style: TextStyle(fontSize: 48, color: Colors.white),
+                    style: GoogleFonts.poppins(
+                      fontSize: 64,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                   Text(
-                    'Publication Layer',
-                    style: TextStyle(fontSize: 100, color: Colors.amber),
+                    'MarketPlace',
+                    style: GoogleFonts.poppins(
+                      fontSize: 124,
+                      color: Colors.amber,
+                      fontWeight: FontWeight.w900,
+                    ),
                   ),
                   Text(
-                    'of Internet',
-                    style: TextStyle(fontSize: 48, color: Colors.white),
+                    'of Books.',
+                    style: GoogleFonts.poppins(
+                      fontSize: 64,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                   SizedBox(height: 100),
                   Text(
                     'The BookSpace is a decentralized publication layer of internet.',
-                    style: TextStyle(fontSize: 24, color: Colors.white38),
+                    style: GoogleFonts.poppins(
+                        fontSize: 24, color: Colors.white38),
                   ),
                   Text(
                     'It is a decentralized platform that allows you to publish your books on the internet.',
-                    style: TextStyle(fontSize: 24, color: Colors.white38),
+                    style: GoogleFonts.poppins(
+                        fontSize: 24, color: Colors.white38),
                   ),
                   SizedBox(height: 100),
                   GestureDetector(
