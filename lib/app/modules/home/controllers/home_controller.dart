@@ -1,9 +1,12 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
-  final count = 0.obs;
+  final recommendedBooks = [
+    'assets/images/book.jpg',
+    'assets/images/book3.jpeg',
+    'assets/images/book4.jpg',
+  ];
+  final rBindex = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -16,5 +19,13 @@ class HomeController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
+
+  scrollForwardRBook() {
+    rBindex((rBindex.value + 1) % recommendedBooks.length);
+  }
+
+  scrollBackwardRBook() {
+    rBindex(((rBindex.value - 1) + recommendedBooks.length) %
+        recommendedBooks.length);
+  }
 }
