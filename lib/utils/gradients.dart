@@ -8,3 +8,11 @@ final LinearGradient primaryGradient = LinearGradient(
     Color.fromARGB(255, 0, 230, 251),
   ],
 );
+final LinearGradient rprimaryGradient = LinearGradient(
+  colors: <Color>[
+    Color.fromARGB(255, 0, 230, 251),
+    Color.fromARGB(255, 4, 152, 238),
+    Color.fromARGB(255, 116, 9, 215),
+    Color.fromARGB(255, 196, 12, 15),
+  ],
+);

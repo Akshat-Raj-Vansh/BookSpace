@@ -1,3 +1,4 @@
+import 'package:bookspace/utils/widgets/gradient_btn.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -67,36 +68,62 @@ class SplashView extends GetView<SplashController> {
                   Text(
                     'The BookSpace is a decentralized publication layer of internet.',
                     style: GoogleFonts.poppins(
-                        fontSize: 24, color: Colors.white38),
+                        fontSize: 28, color: Colors.white38),
                   ),
                   Text(
                     'It is a decentralized platform that allows you to publish your books on the internet.',
                     style: GoogleFonts.poppins(
-                        fontSize: 24, color: Colors.white38),
+                        fontSize: 28, color: Colors.white38),
                   ),
                   SizedBox(height: 100),
-                  GestureDetector(
+                  GradientButton(
                     onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text('Button Pressed'),
-                        ),
+                      Get.toNamed('/auth');
+                      Get.snackbar(
+                        'Button Pressed',
+                        'MetaMask login should be initiated on the button click!',
+                        snackPosition: SnackPosition.BOTTOM,
+                        colorText: Colors.white,
                       );
                     },
                     child: Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 10),
+                          horizontal: 50, vertical: 10),
                       child: Text(
                         'Let\'s get started!',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: Colors.amber, width: 2),
                         color: Colors.black,
+                        border: Border.all(color: Colors.black),
+                        borderRadius: BorderRadius.circular(24),
                       ),
                     ),
-                  )
+                  ),
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Get.toNamed('/auth');
+                  //     Get.snackbar(
+                  //       'Button Pressed',
+                  //       'MetaMask login should be initiated on the button click!',
+                  //       snackPosition: SnackPosition.BOTTOM,
+                  //       colorText: Colors.white,
+                  //     );
+                  //   },
+                  //   child: Container(
+                  //     padding: const EdgeInsets.symmetric(
+                  //         horizontal: 20, vertical: 10),
+                  //     child: Text(
+                  //       'Let\'s get started!',
+                  //       style: TextStyle(fontSize: 20, color: Colors.white),
+                  //     ),
+                  //     decoration: BoxDecoration(
+                  //       borderRadius: BorderRadius.circular(20),
+                  //       border: Border.all(color: Colors.amber, width: 2),
+                  //       color: Colors.black,
+                  //     ),
+                  //   ),
+                  // )
                 ],
               ),
             ),
