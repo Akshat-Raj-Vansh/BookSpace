@@ -20,19 +20,22 @@ class AppPages {
       name: _Paths.HOME,
       page: () => HomeView(),
       binding: HomeBinding(),
-      //curve: Curves.easeIn,
+      curve: Curves.linearToEaseOut,
+      transitionDuration: Duration(milliseconds: 500),
     ),
     GetPage(
       name: _Paths.AUTH,
       page: () => AuthView(),
       binding: AuthBinding(),
-      // curve: Curves.easeIn,
+      curve: Curves.linearToEaseOut,
+      transitionDuration: Duration(milliseconds: 500),
     ),
     GetPage(
       name: _Paths.SPLASH,
       page: () => SplashView(),
       binding: SplashBinding(),
-      // curve: Curves.easeIn,
+      curve: Curves.linearToEaseOut,
+      transitionDuration: Duration(milliseconds: 500),
     ),
   ];
 }

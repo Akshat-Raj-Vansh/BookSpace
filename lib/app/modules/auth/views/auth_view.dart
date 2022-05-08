@@ -200,7 +200,9 @@ class AuthView extends GetView<AuthController> {
                         ),
                         SizedBox(height: 40),
                         GradientButton(
-                          onTap: () {},
+                          onTap: () {
+                            Get.offNamed('/home');
+                          },
                           child: Container(
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 50, vertical: 10),
