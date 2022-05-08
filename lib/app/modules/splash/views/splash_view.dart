@@ -39,7 +39,7 @@ class SplashView extends GetView<SplashController> {
                     style: TextStyle(fontSize: 48, color: Colors.white),
                   ),
                   Text(
-                    'Publishing Layer',
+                    'Publication Layer',
                     style: TextStyle(fontSize: 100, color: Colors.amber),
                   ),
                   Text(
@@ -48,7 +48,7 @@ class SplashView extends GetView<SplashController> {
                   ),
                   SizedBox(height: 100),
                   Text(
-                    'The BookSpace is a decentralized publishing layer of internet.',
+                    'The BookSpace is a decentralized publication layer of internet.',
                     style: TextStyle(fontSize: 24, color: Colors.white38),
                   ),
                   Text(
